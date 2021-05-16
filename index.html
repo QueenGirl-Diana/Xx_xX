@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>C81</title>
+    <link rel="stylesheet" type="text/css" href="C82style.css">
+</head>
+
+<body class="body_backgorund">
+
+    <center>
+        <h1>My First Canvas</h1>
+        <canvas id="myCanvas" width="800" height="600"></canvas>
+        <br>
+    </center>
+
+
+    <script src="C82main.js"></script>
+</body>
+
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html>
+<style>
+    b {
+        color: green;
+    }
+    
+    p {
+        font-size: 19px;
+    }
+</style>
+
+<body>
+    <canvas id="myCanvas" width="600" height="400" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <center>
+        <p>
+            <b>ctx</b> will be used as the reference of the canvas for drawing
+            <br><br>
+            <b>moveTo()</b> method moves the point to the specified point in the canvas, without creating a line. Same as forward function which we had learned in code.org
+            <br><br>
+            <b>syntax of moveTo </b>- ctx.moveTo(x coordinate, y coordinate)
+            <br><br> Change the x coordinates by 100 one by one till 600
+            <br>
+            <b>for eg - ctx.moveTo(100, 0); then ctx.moveTo(200, 0); and so one</b>
+            <br><br> Change the y coordinates by 100 one by one till 500
+            <br>
+            <b>for eg - ctx.moveTo(0, 100); then ctx.moveTo(0, 200); and so one</b>
+        </p>
+        <hr>
+        <p>
+            <b>lineTo()</b> method adds a new point and creates a line TO that point FROM the last specified point(which we have discussed in <b>moveTo()</b>) in the canvas
+            <br><br>
+            <b>syntax of lineTo </b>- lineTo(x coordinate, y coordinate)
+            <br><br> Change the x and y coordinates randomly to show the changes
+        </p>
+    </center>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+
+        //syntax of moveTo- ctx.moveTo(x coordinate, y coordinate)
+        //Change the x coordinates by 100 one by one till 600 
+        //for eg - ctx.moveTo(100, 0); then ctx.moveTo(200, 0); and so one
+        //Change the y coordinates by 100 one by one till 500 
+        //for eg - ctx.moveTo(0, 100); then ctx.moveTo(0, 200); and so one
+        ctx.moveTo(0, 0);
+
+        //syntax of lineTo - lineTo(x coordinate, y coordinate)
+        //Change the x and y coordinates randomly to show the changes
+        //ctx.lineTo(600, 400);
+
+        //ctx.stroke();
+    </script>
+
+    <p><strong>Note:</strong> The canvas tag is not supported in Internet Explorer 8 and earlier versions.</p>
+
+</body>
+
+</html>
